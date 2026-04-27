@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hexo-blog-decrypt</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>hexo-blog-decrypt</h1>
+      <p>抓取 + 词典 + 方块组合破解</p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>1) 抓取页面</h2>
+        <div class="row">
+          <input id="urlInput" type="text" placeholder="输入文章 URL" />
+          <button id="fetchBtn">抓取</button>
+        </div>
+        <pre id="fetchResult"></pre>
+      </section>
+
+      <section class="card">
+        <h2>2) 字典库</h2>
+        <div class="row">
+          <button id="reloadDictBtn">刷新字典列表</button>
+        </div>
+        <ul id="dictFileList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>3) 方块配置</h2>
+        <div class="row">
+          <select id="blockType">
+            <option value="dict">方块类型1：字典块</option>
+            <option value="charset">方块类型2：固定长度枚举块</option>
+          </select>
+          <input id="blockArg1" type="text" placeholder="字典块填字典名；枚举块填字符集，如 abc123" />
+          <input id="blockArg2" type="number" min="1" value="1" placeholder="枚举块长度" />
+          <button id="addBlockBtn">在末尾添加方块</button>
+        </div>
+        <ul id="blockList" class="drag-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>4) 启动破解</h2>
+        <div class="row">
+          <input id="limitInput" type="number" value="100000" />
+          <button id="startCrackBtn">开始</button>
+          <button id="refreshStatusBtn">刷新状态</button>
+        </div>
+        <pre id="crackStatus"></pre>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+  </html>
+

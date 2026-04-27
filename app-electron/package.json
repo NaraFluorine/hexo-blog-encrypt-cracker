@@ -1,0 +1,30 @@
+{
+  "name": "hexo-blog-decrypt-electron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop frontend for hexo-blog-decrypt",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:win": "electron-builder --win",
+    "pack:mac": "electron-builder --mac",
+    "pack:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "dev.hexoblog.decrypt",
+    "productName": "hexo-blog-decrypt",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ]
+  }
+}
+

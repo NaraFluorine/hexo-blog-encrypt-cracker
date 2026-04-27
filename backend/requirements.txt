@@ -1,0 +1,7 @@
+beautifulsoup4
+fastapi
+pycryptodome
+pydantic
+requests
+uvicorn
+

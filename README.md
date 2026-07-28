@@ -1,4 +1,6 @@
-# hexo-blog-decrypt
+# [Depreciated] hexo-blog-encrypt-cracker
+
+This repo was designed to help cracking passwords of hexo blogs, but now the cost is too high, and I have to depreciate this repo.
 
 English | 中文
 
